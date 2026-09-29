@@ -178,10 +178,10 @@ a{color:inherit;text-decoration:none}
     <div class="card" id="card" tabindex="0" role="button" aria-label="Tap to flip card">
       <section class="face front"><div class="frame"><i></i><i></i><i></i><i></i></div>
         <div class="logos"><img class="l-imarat" src="assets/imarat-logo.png" alt="IMARAT Group of Companies"><i class="vsep"></i><img class="l-a21" src="assets/agency21-gold.png" alt="Agency21 International"></div>
-        <div class="name">Raja Ammar</div>
+        <div class="name">Abdullah Abbasi</div>
         <div class="rule"><i></i></div>
         <div class="role">Financial Consultant</div>
-        <div class="seal" aria-hidden="true">RA</div>
+        <div class="seal" aria-hidden="true">AB</div>
         <div class="micro">Private Digital Introduction</div>
         <div class="side-decor" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
       </section>
@@ -191,9 +191,9 @@ a{color:inherit;text-decoration:none}
           <div class="eyebrow">Let's Connect</div>
           <div class="rule"><i></i></div>
           <div class="contact">
-            <a class="item" href="tel:+923185657521" data-act="call"><span class="ico"><svg class="ic"><use href="#i-phone"/></svg></span><span class="item-text"><small>Mobile</small>0318-5657521</span></a>
-            <a class="item" href="https://wa.me/923185657521" target="_blank" rel="noopener"><span class="ico"><svg class="ic"><use href="#i-wa"/></svg></span><span class="item-text"><small>WhatsApp</small>0318-5657521</span></a>
-            <a class="item" href="mailto:Ammar.ali@agency21.com.pk" data-act="email"><span class="ico"><svg class="ic"><use href="#i-mail"/></svg></span><span class="item-text"><small>Email</small>Ammar.ali@agency21.com.pk</span></a>
+            <a class="item" href="tel:+923325486687" data-act="call"><span class="ico"><svg class="ic"><use href="#i-phone"/></svg></span><span class="item-text"><small>Mobile</small>0332-5486687</span></a>
+            <a class="item" href="https://wa.me/923325486687" target="_blank" rel="noopener"><span class="ico"><svg class="ic"><use href="#i-wa"/></svg></span><span class="item-text"><small>WhatsApp</small>0332-5486687</span></a>
+            <a class="item" href="mailto:Abdullah.abbasi@agency21.com.pk" data-act="email"><span class="ico"><svg class="ic"><use href="#i-mail"/></svg></span><span class="item-text"><small>Email</small>Abdullah.abbasi@agency21.com.pk</span></a>
             <a class="item" href="https://maps.google.com/?q=Mall+of+Imarat+Islamabad" target="_blank" rel="noopener"><span class="ico"><svg class="ic"><use href="#i-pin"/></svg></span><span class="item-text"><small>Office</small>Mall of Imarat, near PWD underpass, Main Expressway, Islamabad</span></a>
           </div>
           <a class="site" href="https://www.imarat.com.pk" target="_blank" rel="noopener">www.imarat.com.pk</a>
@@ -205,9 +205,9 @@ a{color:inherit;text-decoration:none}
   <div class="toast" id="toast" role="status"></div>
   <div class="tip" id="tip">Move your cursor · tilt your phone · tap to flip</div>
   <div class="actions">
-    <a class="action" href="tel:+923185657521" data-act="call">CALL</a>
-    <a class="action" href="https://wa.me/923185657521" target="_blank" rel="noopener">WHATSAPP</a>
-    <a class="action" href="mailto:Ammar.ali@agency21.com.pk" data-act="email">EMAIL</a>
+    <a class="action" href="tel:+923325486687" data-act="call">CALL</a>
+    <a class="action" href="https://wa.me/923325486687" target="_blank" rel="noopener">WHATSAPP</a>
+    <a class="action" href="mailto:Abdullah.abbasi@agency21.com.pk" data-act="email">EMAIL</a>
     <button class="action" id="save">SAVE CONTACT</button>
   </div>
 </div>
@@ -232,8 +232,8 @@ stage.addEventListener('touchstart',e=>{sx=e.touches[0].clientX;sy=e.touches[0].
 stage.addEventListener('touchmove',e=>{const t=e.touches[0];tx=Math.max(-18,Math.min(18,(t.clientX-sx)/10));ty=Math.max(-14,Math.min(14,-(t.clientY-sy)/10))},{passive:true});
 stage.addEventListener('touchend',()=>{tx=0;ty=0});
 document.getElementById('save').addEventListener('click',()=>{
-  const v=`BEGIN:VCARD\nVERSION:3.0\nFN:Raja Ammar\nORG:IMARAT Group of Companies\nTITLE:Financial Consultant\nTEL;TYPE=CELL:+923185657521\nEMAIL:Ammar.ali@agency21.com.pk\nURL:https://www.imarat.com.pk\nADR;TYPE=WORK:;;Mall of Imarat, near PWD underpass, Main Expressway;Islamabad;;;Pakistan\nEND:VCARD`;
-  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([v],{type:'text/vcard'}));a.download='Raja-Ammar.vcf';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)});
+  const v=`BEGIN:VCARD\nVERSION:3.0\nFN:Abdullah Abbasi\nORG:IMARAT Group of Companies\nTITLE:Financial Consultant\nTEL;TYPE=CELL:+923325486687\nEMAIL:Abdullah.abbasi@agency21.com.pk\nURL:https://www.imarat.com.pk\nADR;TYPE=WORK:;;Mall of Imarat, near PWD underpass, Main Expressway;Islamabad;;;Pakistan\nEND:VCARD`;
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([v],{type:'text/vcard'}));a.download='Abdullah-Abbasi.vcf';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)});
 
 const toastEl=document.getElementById('toast');let toastT;
 function toast(m){toastEl.textContent=m;toastEl.classList.add('show');clearTimeout(toastT);toastT=setTimeout(()=>toastEl.classList.remove('show'),2600)}
@@ -243,7 +243,7 @@ document.querySelectorAll('[data-act]').forEach(el=>el.addEventListener('click',
   if(isMobile)return; /* phones: native tel:/mailto: handlers */
   e.preventDefault();
   if(el.dataset.act==='call'){
-    const n='0318-5657521';
+    const n='0332-5486687';
     copy(n).then(()=>toast('Number copied: '+n),()=>toast('Call: '+n));
   }else{
     window.open('https://mail.google.com/mail/?view=cm&fs=1&to=Ammar.work321@gmail.com','_blank','noopener');
